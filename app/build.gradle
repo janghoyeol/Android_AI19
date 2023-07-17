@@ -26,6 +26,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    // packagingOptions 블록 추가
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+    }
+
 }
 
 dependencies {
@@ -36,4 +41,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //구글 speech-to-text 음성 텍스트 변환
+    //implementation 'com.google.cloud:google-cloud-speech:1.30.0'
 }
